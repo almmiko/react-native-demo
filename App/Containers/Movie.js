@@ -16,6 +16,7 @@ import { Metrics } from '../Themes'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
 import { Actions as NavigationActions } from 'react-native-router-flux'
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
 
 // I18n
@@ -33,20 +34,24 @@ const styles = StyleSheet.create({
         padding: 20
     },
     textSpan: {
-        color: '#ef1a51'
+        color: '#ef1a51',
+        fontFamily: 'LatoBold'
     },
     movieYear: {
-        color: '#fff'
+        color: '#fff',
+        fontFamily: 'LatoBold'
     },
     movieTitle: {
         color: '#fff',
         fontSize: 30,
         fontWeight: 'bold',
         marginTop: 1,
-        marginBottom: 1
+        marginBottom: 1,
+        fontFamily: 'LatoBold'
     },
     movieGanre: {
-        color: '#d5d5d5'
+        color: '#d5d5d5',
+        fontFamily: 'LatoBold'
     },
     line: {
         borderWidth: 1,
@@ -91,7 +96,21 @@ const styles = StyleSheet.create({
     },
     ratingOf: {
         color: '#676971'
-    }
+    },
+    descriptionContainer: {
+      padding: 20,
+    },
+    descriptionTitle: {
+      color: '#000',
+      fontFamily: 'LatoBold'
+    },
+    descriptionText: {
+      color: '#676971',
+      fontFamily: 'LatoBold'
+    },
+    actorName: {color: '#fff', fontSize: 28, fontFamily: 'LatoBold'},
+    actorHeroName: {color: '#ef1a51', fontStyle: 'italic'},
+    actorsNamePositions: {flex: 1, marginTop: 140, marginLeft: 20}
 });
 
 
@@ -133,33 +152,89 @@ class Movie extends React.Component {
                     </View>
                 )} >
           <ScrollView style={{flex: 1}}>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text>
-            <Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text><Text>sfsdfsd f</Text>
+            <View style={styles.descriptionContainer}>
+              <Text style={styles.descriptionTitle}>{'Synopsis:'.toUpperCase()}</Text>
+              <Text style={styles.descriptionText}>A woman rebels against a tyrannical ruler in postapocalyptic Australia in search for her home-land with the help of a group of female prisoners, a psychotic worshipper, and a drifter named Max.</Text>
+            </View>
+
+
+            <ScrollableTabView
+                prerenderingSiblingsNumber={2}
+                tabBarPosition='top'
+                tabBarBackgroundColor="#111418"
+                tabBarInactiveTextColor="#fff"
+                styles={{fontFamily: 'LatoBold'}}
+                tabBarUnderlineStyle={{backgroundColor: '#ef1a51'}}
+                tabBarActiveTextColor="#ef1a51">
+
+              <View tabLabel="PICTURES">
+                <View style={{flex: 1}}>
+                  <Image resizeMode="cover" style={{height: 200}} source={{uri: 'movie_info_1'}}/>
+                </View>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                  <Image resizeMode="cover" style={{height: 250, width: 200}} source={{uri: 'movie_info_2'}} />
+                  <View style={{flex: 1, flexDirection: 'column'}}>
+                    <Image resizeMode="cover" style={{height: 125}} source={{uri: 'movie_info_3'}} />
+                    <Image resizeMode="cover" style={{height: 125}} source={{uri: 'movie_info_4'}} />
+                  </View>
+                </View>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                  <Image resizeMode="cover" style={{height: 250, width: 200}} source={{uri: 'movie_info_6'}} />
+                  <Image resizeMode="cover" style={{height: 250, width: 200}} source={{uri: 'movie_info_7'}} />
+                </View>
+              </View>
+              <View tabLabel="CASTING">
+                <View style={{flex: 1}}>
+                  <Image  style={{height: 200}} source={{uri: 'actor_1'}}>
+                    <View style={{position: 'absolute', bottom: 20, left: 20}}>
+                      <Text style={styles.actorName}>{'Tom hardy'.toUpperCase()}</Text>
+                      <Text style={styles.actorHeroName}>Max Rockatansky</Text>
+                    </View>
+                  </Image>
+                </View>
+                <View style={{flex: 2, flexDirection: 'row'}}>
+                  <Image style={{height: 250, flex: 2}} source={{uri: 'actor_2'}} >
+                    <View style={styles.actorsNamePositions}>
+                      <Text style={styles.actorName}>{'Charlize Theron'.toUpperCase()}</Text>
+                      <Text style={styles.actorHeroName}>Imperator Furiosa</Text>
+                    </View>
+                  </Image>
+                  <Image style={{height: 250, flex: 2}} source={{uri: 'actor_3'}} >
+                    <View style={styles.actorsNamePositions}>
+                      <Text style={styles.actorName}>{'Nicholas Hoult'.toUpperCase()}</Text>
+                      <Text style={styles.actorHeroName}>Nux</Text>
+                    </View>
+                  </Image>
+                </View>
+                <View style={{flexDirection: 'row'}}>
+                  <Image style={{height: 250, flex: 1 }} source={{uri: 'actor_4'}} >
+                    <View style={styles.actorsNamePositions}>
+                      <Text style={[styles.actorName, {fontSize: 24, marginTop: 5}]}>{'Hugh Keays-Byrne'.toUpperCase()}</Text>
+                      <Text style={styles.actorHeroName}>Imperator</Text>
+                    </View>
+                  </Image>
+                  <Image style={{height: 250, flex: 1 }} source={{uri: 'actor_5'}} >
+                    <View style={styles.actorsNamePositions}>
+                      <Text style={styles.actorName}>{'Zoë Kravitz'.toUpperCase()}</Text>
+                      <Text style={styles.actorHeroName}>Toast the Knowing</Text>
+                    </View>
+                  </Image>
+                </View>
+              </View>
+            </ScrollableTabView>
+
+            <View style={{backgroundColor: '#101317', height: 100, flex: 1, alignItems: 'center',
+        justifyContent: 'center',}}>
+              <Text style={{color: '#5b5d63', fontFamily: 'LatoBold'}}>{'People who liked this'.toUpperCase()}</Text>
+              <Text style={{color: '#fff', fontFamily: 'LatoBold'}}>{'also liked:'.toUpperCase()}</Text>
+            </View>
+
+            <View style={{flex: 1, flexDirection: 'row' }}>
+              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_1'}} />
+              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_2'}} />
+              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_3'}} />
+            </View>
+
           </ScrollView>
         </ParallaxView>
     )
@@ -170,11 +245,11 @@ class Movie extends React.Component {
 const mapStateToProps = (state) => {
   return {
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Movie)

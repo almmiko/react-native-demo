@@ -51,7 +51,7 @@ let Icons = (props) => {
                     <TouchableOpacity  key={idx}  style={styles.touchable} activeOpacity={0.7}>
                         <View  style={styles.icon}>
                             <Icon name={icon.icon} size={icon.iconSize} color={icon.iconColor} />
-                            <Text style={{color: icon.textColor }}>{icon.text}</Text>
+                            <Text style={{color: icon.textColor, fontFamily: 'LatoRegular' }}>{icon.text}</Text>
                         </View>
                     </TouchableOpacity>
                 );

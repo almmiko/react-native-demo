@@ -32,29 +32,27 @@ class NavigationRouter extends Component {
   render () {
     return (
       <Router>
-        <Scene key='drawer' component={NavigationDrawer} open={false}>
-          <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene key='presentationScreen' component={PresentationScreen} title='Ignite' renderLeftButton={NavItems.hamburgerButton} />
-            <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
-            <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
-            <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
-            <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />
-            <Scene key='listviewGridExample' component={ListviewGridExample} title='Listview Grid' />
-            <Scene key='listviewSectionsExample' component={ListviewSectionsExample} title='Listview Sections' />
-            <Scene key='listviewSearchingExample' component={ListviewSearchingExample} title='Listview Searching' navBar={CustomNavBar} />
-            <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-            <Scene key='apiTesting' component={APITestingScreen} title='API Testing' />
-            <Scene key='theme' component={ThemeScreen} title='Theme' />
+        <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
+          <Scene key='presentationScreen' component={PresentationScreen} title='Ignite' renderLeftButton={NavItems.hamburgerButton} />
+          <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
+          <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
+          <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
+          <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />
+          <Scene key='listviewGridExample' component={ListviewGridExample} title='Listview Grid' />
+          <Scene key='listviewSectionsExample' component={ListviewSectionsExample} title='Listview Sections' />
+          <Scene key='listviewSearchingExample' component={ListviewSearchingExample} title='Listview Searching' navBar={CustomNavBar} />
+          <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
+          <Scene key='apiTesting' component={APITestingScreen} title='API Testing' />
+          <Scene key='theme' component={ThemeScreen} title='Theme' />
 
-            {/* Custom navigation bar example */}
-            <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
+          {/* Custom navigation bar example */}
+          <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
 
-            <Scene titleStyle={{color: '#ef1a51'}} navigationBarStyle={{backgroundColor: 'rgba(22, 23, 27, 0.9)'}} initial key='movies' component={Movies} title='Movies' />
+          <Scene titleStyle={{color: '#ef1a51', fontFamily: 'LatoBold'}} navigationBarStyle={{backgroundColor: 'rgba(22, 23, 27, 0.9)'}} initial key='movies' component={Movies} title='Movies' />
 
-            <Scene titleStyle={{color: '#ef1a51'}} navigationBarStyle={{backgroundColor: 'rgb(22, 23, 27)'}}  key='movie' component={Movie} title='Movie' />
+          <Scene titleStyle={{color: '#ef1a51', fontFamily: 'LatoBold'}} navigationBarStyle={{backgroundColor: 'rgb(22, 23, 27)'}}  key='movie' component={Movie} title='Movie' />
 
 
-          </Scene>
         </Scene>
       </Router>
     )
