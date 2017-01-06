@@ -1,7 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Scene, Router } from 'react-native-router-flux'
+import { StyleSheet } from 'react-native'
+import { Scene, Router, Actions as NavigationActions } from 'react-native-router-flux'
 import Styles from './Styles/NavigationContainerStyle'
 import NavigationDrawer from './NavigationDrawer'
 import NavItems from './NavItems'
@@ -24,36 +25,72 @@ import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
 import Movies from '../Containers/Movies'
 import Movie from '../Containers/Movie'
 
+import TvShows from '../Containers/TvShows'
+
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
 
+const styles = StyleSheet.create({
+  movieTitle: {color: '#ef1a51', fontFamily: 'LatoBold'},
+  bar: {backgroundColor: 'rgba(22, 23, 27, 0.9)'},
+  child: {backgroundColor: 'rgb(22, 23, 27)'}
+});
+
 class NavigationRouter extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.redirectToView = this.redirectToView.bind(this);
+  }
+
+  redirectToView(route) {
+
+    let path = null;
+
+    switch (route) {
+      case 'Profile':
+        path = 'profile';
+        break;
+      case 'TV shows':
+        path = 'tvShows';
+        break;
+      case 'Watchlist':
+        path = 'watchlist';
+        break;
+      default:
+        path = 'movies';
+    }
+
+    NavigationActions[path]({type: "reset"});
+
+  }
+
   render () {
     return (
       <Router>
         <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
           <Scene key='presentationScreen' component={PresentationScreen} title='Ignite' renderLeftButton={NavItems.hamburgerButton} />
-          <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
+
           <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
           <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
-          <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />
-          <Scene key='listviewGridExample' component={ListviewGridExample} title='Listview Grid' />
-          <Scene key='listviewSectionsExample' component={ListviewSectionsExample} title='Listview Sections' />
           <Scene key='listviewSearchingExample' component={ListviewSearchingExample} title='Listview Searching' navBar={CustomNavBar} />
-          <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-          <Scene key='apiTesting' component={APITestingScreen} title='API Testing' />
-          <Scene key='theme' component={ThemeScreen} title='Theme' />
+
 
           {/* Custom navigation bar example */}
           <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
 
-          <Scene titleStyle={{color: '#ef1a51', fontFamily: 'LatoBold'}} navigationBarStyle={{backgroundColor: 'rgba(22, 23, 27, 0.9)'}} initial key='movies' component={Movies} title='Movies' />
+          {/* Movies */}
+          <Scene getRoute={this.redirectToView} titleStyle={styles.movieTitle} navigationBarStyle={styles.bar} initial key='movies' component={Movies} title='Movies' />
+          <Scene titleStyle={styles.movieTitle} navigationBarStyle={styles.child}  key='movie' component={Movie} title='Movie' />
 
-          <Scene titleStyle={{color: '#ef1a51', fontFamily: 'LatoBold'}} navigationBarStyle={{backgroundColor: 'rgb(22, 23, 27)'}}  key='movie' component={Movie} title='Movie' />
+          {/* TV shows*/}
+          <Scene getRoute={this.redirectToView} key='tvShows' component={TvShows} title='TV SHOWS' titleStyle={[styles.movieTitle, {color: '#1aceef'}]} navigationBarStyle={styles.bar} />
 
 
         </Scene>
+
       </Router>
     )
   }

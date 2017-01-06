@@ -82,6 +82,16 @@ let PosterList = (props) => {
 
 class Movies extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.rootRedirect = this.rootRedirect.bind(this);
+  }
+
+  rootRedirect(route) {
+    this.props.getRoute(route);
+  }
+
   render () {
     return (
         <View style={{flex: 1}}>
@@ -110,7 +120,7 @@ class Movies extends React.Component {
               <PosterList images={data}  />
             </ScrollView>
           </ScrollableTabView>
-          <FooterNav />
+          <FooterNav route={this.rootRedirect} />
         </View>
     )
   }

@@ -44,11 +44,16 @@ let icons = [
     ];
 
 let Icons = (props) => {
+
+    let goToRoute = (route, e) => {
+      props.route(route);
+    };
+
     return (
         <View style={styles.container}>
             {props.icons.map((icon, idx) => {
                 return (
-                    <TouchableOpacity  key={idx}  style={styles.touchable} activeOpacity={0.7}>
+                    <TouchableOpacity onPress={goToRoute.bind(null, icon.text)}  key={idx}  style={styles.touchable} activeOpacity={0.7}>
                         <View  style={styles.icon}>
                             <Icon name={icon.icon} size={icon.iconSize} color={icon.iconColor} />
                             <Text style={{color: icon.textColor, fontFamily: 'LatoRegular' }}>{icon.text}</Text>
@@ -61,8 +66,13 @@ let Icons = (props) => {
 };
 
 let FooterNav = (props) => {
+
+    let goToRoute = (route) => {
+      props.route(route);
+    };
+
     return (
-        <Icons icons={icons} />
+        <Icons route={goToRoute} icons={icons} />
     );
 };
 
