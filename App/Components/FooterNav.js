@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
     },
     touchable: {
         flex: 1,
-    }
+    },
+    textStyles: {color: '#fff', fontFamily: 'LatoRegular'}
 });
 
 let icons = [
-        {icon: 'film', iconColor: '#ef1a51', iconSize: 15, textColor: '#ef1a51', text: 'Movies'},
-        {icon: 'television', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'TV shows'},
+        {icon: 'film', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Movies', key: 'movies'},
+        {icon: 'television', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'TV shows', key: 'tvShows'},
         {icon: 'heart-o', iconColor: '#fff', iconSize: 15, textColor: '#fff',text: 'Watchlist'},
         {icon: 'user-o', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Profile'},
     ];
@@ -52,11 +53,30 @@ let Icons = (props) => {
     return (
         <View style={styles.container}>
             {props.icons.map((icon, idx) => {
+
+              let activeTabColor = null;
+
+              if (props.activeTab === icon.key) {
+                switch (props.activeTab) {
+                  case 'tvShows':
+                    activeTabColor = '#1aceef';
+                    break;
+                  case 'movies':
+                    activeTabColor = '#ef1a51';
+                    break;
+                  default:
+                    activeTabColor = '#fff';
+                }
+              } else {
+                activeTabColor = '#fff';
+              }
+
                 return (
                     <TouchableOpacity onPress={goToRoute.bind(null, icon.text)}  key={idx}  style={styles.touchable} activeOpacity={0.7}>
                         <View  style={styles.icon}>
-                            <Icon name={icon.icon} size={icon.iconSize} color={icon.iconColor} />
-                            <Text style={{color: icon.textColor, fontFamily: 'LatoRegular' }}>{icon.text}</Text>
+                            <Icon name={icon.icon}
+                                  size={icon.iconSize} color={activeTabColor} />
+                            <Text style={[styles.textStyles, {color: activeTabColor}]}>{icon.text}</Text>
                         </View>
                     </TouchableOpacity>
                 );
@@ -72,7 +92,7 @@ let FooterNav = (props) => {
     };
 
     return (
-        <Icons route={goToRoute} icons={icons} />
+        <Icons route={goToRoute} icons={icons} activeTab={props.activeTab} />
     );
 };
 

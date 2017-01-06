@@ -102,8 +102,8 @@ class Movies extends React.Component {
               style={styles.header}
               tabBarBackgroundColor="rgba(22, 23, 27, 0.9)"
               tabBarInactiveTextColor="#fff"
-              tabBarUnderlineStyle={{backgroundColor: '#ef1a51'}}
-              tabBarActiveTextColor="#ef1a51">
+              tabBarUnderlineStyle={{backgroundColor: this.props.colorForHeader}}
+              tabBarActiveTextColor={this.props.colorForHeader}>
             <ScrollView tabLabel="For You">
               <PosterList images={data}  />
             </ScrollView>
@@ -120,7 +120,7 @@ class Movies extends React.Component {
               <PosterList images={data}  />
             </ScrollView>
           </ScrollableTabView>
-          <FooterNav route={this.rootRedirect} />
+          <FooterNav route={this.rootRedirect} activeTab={'movies'}/>
         </View>
     )
   }

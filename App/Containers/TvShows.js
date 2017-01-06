@@ -40,35 +40,6 @@ let data = [
   {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
   {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
   {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},{image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
-  {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_1', title: 'BILLIONS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'},
-  {image: 'cover_serial_2', title: 'SUITS', text1: '2011 - 5 SAISONs - ', text2: 'Last: 2 Mar. 2016', text3: 'Next: 2016', rate: '8.7'},
-  {image: 'cover_serial_3', title: 'RAY DONOVAN', text1: '2008 - 3 SAISONs - ', text2: 'Last: 27 Sep. 2015', text3: 'Next: 2017', rate: '8.3'},
-  {image: 'cover_serial_4', title: 'BREAKING BAD', text1: '2018 - 5 SAISONs -', text2: 'Last: 29 Sep. 2013', text3: 'Production complate', rate: '9.5'},
   {image: 'cover_serial_5', title: 'NARCOS', text1: '2016 - 1 SAISON - ', text2: 'Last: 21 Feb. 2016', text3: 'Next: 3 days', rate: '8.4'}];
 
 
@@ -120,26 +91,26 @@ class TvShows extends React.Component {
           style={styles.header}
           tabBarBackgroundColor="rgba(22, 23, 27, 0.9)"
           tabBarInactiveTextColor="#fff"
-          tabBarUnderlineStyle={{backgroundColor: '#ef1a51'}}
-          tabBarActiveTextColor="#ef1a51">
+          tabBarUnderlineStyle={{backgroundColor: this.props.colorForHeader}}
+          tabBarActiveTextColor={this.props.colorForHeader} >
           <ScrollView tabLabel="For You">
             <Rows />
           </ScrollView>
           <ScrollView tabLabel="Top">
-
+            <Rows />
           </ScrollView>
           <ScrollView tabLabel="Action">
-
+            <Rows />
           </ScrollView>
           <ScrollView tabLabel="Comedy">
-
+            <Rows />
           </ScrollView>
           <ScrollView tabLabel="Family">
-
+            <Rows />
           </ScrollView>
         </ScrollableTabView>
 
-        <FooterNav route={this.rootRedirect} />
+        <FooterNav route={this.rootRedirect} activeTab={'tvShows'} />
       </View>
     )
   }

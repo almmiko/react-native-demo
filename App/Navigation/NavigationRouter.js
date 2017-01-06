@@ -82,11 +82,11 @@ class NavigationRouter extends Component {
           <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
 
           {/* Movies */}
-          <Scene getRoute={this.redirectToView} titleStyle={styles.movieTitle} navigationBarStyle={styles.bar} initial key='movies' component={Movies} title='Movies' />
+          <Scene colorForHeader="#ef1a51" getRoute={this.redirectToView} titleStyle={styles.movieTitle} navigationBarStyle={styles.bar} initial key='movies' component={Movies} title='Movies' />
           <Scene titleStyle={styles.movieTitle} navigationBarStyle={styles.child}  key='movie' component={Movie} title='Movie' />
 
           {/* TV shows*/}
-          <Scene getRoute={this.redirectToView} key='tvShows' component={TvShows} title='TV SHOWS' titleStyle={[styles.movieTitle, {color: '#1aceef'}]} navigationBarStyle={styles.bar} />
+          <Scene colorForHeader="#1aceef" getRoute={this.redirectToView} key='tvShows' component={TvShows} title='TV SHOWS' titleStyle={[styles.movieTitle, {color: '#1aceef'}]} navigationBarStyle={styles.bar} />
 
 
         </Scene>
