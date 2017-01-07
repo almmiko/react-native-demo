@@ -91,7 +91,7 @@ class NavigationRouter extends Component {
                  getRoute={this.redirectToView}
                  titleStyle={styles.movieTitle}
                  navigationBarStyle={styles.bar}
-
+                 initial
                  key='movies'
                  component={Movies}
                  title='MOVIES' />
@@ -126,8 +126,7 @@ class NavigationRouter extends Component {
                  navigationBarStyle={styles.bar} />
 
           {/* Profile */}
-          <Scene initial
-                 hideNavBar
+          <Scene hideNavBar
                  getRoute={this.redirectToView}
                  key='profile' component={Profile} />
 

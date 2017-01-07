@@ -9,6 +9,8 @@ import {
     View
 } from 'react-native'
 import { connect } from 'react-redux'
+
+import SplashScreen from 'react-native-splash-screen'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 import { Metrics } from '../Themes'
@@ -90,6 +92,14 @@ class Movies extends React.Component {
 
   rootRedirect(route) {
     this.props.getRoute(route);
+  }
+
+  componentDidMount() {
+
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 200);
+
   }
 
   render () {
