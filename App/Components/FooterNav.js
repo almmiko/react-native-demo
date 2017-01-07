@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
     touchable: {
         flex: 1,
     },
-    textStyles: {color: '#fff', fontFamily: 'LatoRegular'}
+    textStyles: {color: '#fff', fontFamily: 'LatoRegular', fontSize: 11, marginTop: 3}
 });
 
 let icons = [
         {icon: 'film', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Movies', key: 'movies'},
         {icon: 'television', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'TV shows', key: 'tvShows'},
         {icon: 'heart-o', iconColor: '#fff', iconSize: 15, textColor: '#fff',text: 'Watchlist', key: 'watchList'},
-        {icon: 'user-o', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Profile'},
+        {icon: 'user-o', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Profile', key: 'profile'},
     ];
 
 let Icons = (props) => {
@@ -67,6 +67,9 @@ let Icons = (props) => {
                   case 'watchList':
                     activeTabColor = '#18F0C0';
                     break;
+                  case 'profile':
+                    activeTabColor = '#9f56dc';
+                    break;
                   default:
                     activeTabColor = '#fff';
                 }
@@ -79,7 +82,7 @@ let Icons = (props) => {
                         <View  style={styles.icon}>
                             <Icon name={icon.icon}
                                   size={icon.iconSize} color={activeTabColor} />
-                            <Text style={[styles.textStyles, {color: activeTabColor}]}>{icon.text}</Text>
+                            <Text style={[styles.textStyles, {color: activeTabColor}]}>{icon.text.toUpperCase()}</Text>
                         </View>
                     </TouchableOpacity>
                 );

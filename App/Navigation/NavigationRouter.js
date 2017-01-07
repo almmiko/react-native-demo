@@ -30,6 +30,8 @@ import TvShow from '../Containers/TvShow'
 
 import Watchlist from '../Containers/Watchlist'
 
+import Profile from '../Containers/Profile'
+
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
@@ -117,14 +119,19 @@ class NavigationRouter extends Component {
 
           {/* WatchList*/}
           <Scene colorForHeader="#18f0c0"
-                 initial
                  getRoute={this.redirectToView}
                  key='watchList' component={Watchlist}
                  title={'watchList'.toUpperCase()}
                  titleStyle={[styles.movieTitle, {color: '#18f0c0'}]}
                  navigationBarStyle={styles.bar} />
-        </Scene>
 
+          {/* Profile */}
+          <Scene initial
+                 hideNavBar
+                 getRoute={this.redirectToView}
+                 key='profile' component={Profile} />
+
+        </Scene>
       </Router>
     )
   }

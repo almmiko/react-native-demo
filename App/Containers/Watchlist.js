@@ -129,7 +129,7 @@ class Watchlist extends React.Component {
                 </View>
               </View>
 
-              <View style={{marginBottom: 10, padding: 20}}>
+              <View style={{marginBottom: 10, padding: 20,  backgroundColor: '#0c0d0f'}}>
                 <TouchableOpacity onPress={this.goToshow} activeOpacity={0.6}>
                   <View style={{flexDirection: 'row'}}>
                     <Image source={{uri: 'cover_serial_1'}} style={{width: 100, height: 60}}/>
@@ -159,7 +159,7 @@ class Watchlist extends React.Component {
                 </View>
               </View>
 
-              <View style={{marginBottom: 10, backgroundColor: '#0c0d0f', padding: 20}}>
+              <View style={{marginBottom: 10, padding: 20}}>
                 <TouchableOpacity onPress={this.goToshow} activeOpacity={0.6}>
                   <View style={{flexDirection: 'row'}}>
                     <Image source={{uri: 'sails_poster'}} style={{width: 100, height: 60}}/>
