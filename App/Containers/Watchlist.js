@@ -92,7 +92,86 @@ class Watchlist extends React.Component {
             <PosterList images={data}  />
           </ScrollView>
           <ScrollView tabLabel="TV-SHOWS">
-            <Text>sfsdfsdfsd</Text>
+            <View style={{flex: 1}}>
+
+              <View style={{marginBottom: 10, padding: 20}}>
+                <View style={{flexDirection: 'row'}}>
+                  <Image source={{uri: 'cover_serial_1'}} style={{width: 100, height: 60}}/>
+                  <View style={{paddingTop: 10, paddingLeft: 10}}>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold'}}>BILLIONS</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>Next episode: 3 days (06.03.16)</Text>
+                  </View>
+                </View>
+
+                <View style={{flex: 1, flexDirection: 'row', marginTop: 20}}>
+                  <View style={{flex: 2, marginRight: 10}}>
+                    <Image style={{height: 100}} source={{uri: 's_1'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S1E6 The deal</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>21 Feb. 2016</Text>
+                    <Text style={{position: 'absolute', right: 0, bottom: 20, color: '#111215', fontSize: 12, width: 50, textAlign: 'center', fontFamily: 'LatoBold', backgroundColor: '#18f0c0', borderRadius: 100}}>NEW</Text>
+                  </View>
+                  <View style={{flex: 2}}>
+                    <Image style={{height: 100}} source={{uri: 's_2'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S1E5 The good life</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>14 Feb. 2016</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={{marginBottom: 10, backgroundColor: '#0c0d0f', padding: 20}}>
+                <View style={{flexDirection: 'row'}}>
+                  <Image source={{uri: 'sails_poster'}} style={{width: 100, height: 60}}/>
+                  <View style={{paddingTop: 10, paddingLeft: 10}}>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold'}}>BLACK SAILS</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>Next episode: 6 days (06.03.16)</Text>
+                  </View>
+                </View>
+
+                <View style={{flex: 1, flexDirection: 'row', marginTop: 20}}>
+                  <View style={{flex: 2, marginRight: 10}}>
+                    <Image style={{height: 100}} source={{uri: 's_3'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S3E5 XXIII.</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>20 Feb. 2016</Text>
+                    <Text style={{position: 'absolute', right: 0, bottom: 20, color: '#111215', fontSize: 12, width: 50, textAlign: 'center', fontFamily: 'LatoBold', backgroundColor: '#18f0c0', borderRadius: 100}}>NEW</Text>
+                  </View>
+                  <View style={{flex: 2}}>
+                    <Image style={{height: 100}} source={{uri: 's_4'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S1E5 The good life</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>14 Feb. 2016</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={{marginBottom: 10, padding: 20}}>
+                <View style={{flexDirection: 'row'}}>
+                  <Image source={{uri: 'cover_serial_4'}} style={{width: 100, height: 60}}/>
+                  <View style={{paddingTop: 10, paddingLeft: 10}}>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold'}}>{'Breaking bad'.toUpperCase()}</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>Next episode: 3 days (06.03.16)</Text>
+                  </View>
+                </View>
+
+                <View style={{flex: 1, flexDirection: 'row', marginTop: 20}}>
+                  <View style={{flex: 2, marginRight: 10}}>
+                    <Image style={{height: 100}} source={{uri: 'br_2'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S1E6 The deal</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>21 Feb. 2016</Text>
+                    <Text style={{position: 'absolute', right: 0, bottom: 20, color: '#111215', fontSize: 12, width: 50, textAlign: 'center', fontFamily: 'LatoBold', backgroundColor: '#18f0c0', borderRadius: 100}}>NEW</Text>
+                  </View>
+                  <View style={{flex: 2}}>
+                    <Image style={{height: 100}} source={{uri: 'br_5'}}/>
+                    <Text style={{color: '#fff', fontFamily: 'LatoBold', marginTop: 10}}>S1E5 The good life</Text>
+                    <Text style={{color: '#7e7e7e', fontFamily: 'LatoBold'}}>14 Feb. 2016</Text>
+                  </View>
+                </View>
+              </View>
+
+
+            </View>
+
+            <View style={{height: 60}}>
+
+            </View>
           </ScrollView>
         </ScrollableTabView>
 

@@ -89,7 +89,7 @@ class NavigationRouter extends Component {
                  getRoute={this.redirectToView}
                  titleStyle={styles.movieTitle}
                  navigationBarStyle={styles.bar}
-                 initial
+
                  key='movies'
                  component={Movies}
                  title='MOVIES' />
@@ -117,6 +117,7 @@ class NavigationRouter extends Component {
 
           {/* WatchList*/}
           <Scene colorForHeader="#18f0c0"
+                 initial
                  getRoute={this.redirectToView}
                  key='watchList' component={Watchlist}
                  title={'watchList'.toUpperCase()}
