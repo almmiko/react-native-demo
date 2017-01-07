@@ -10,9 +10,7 @@ import {
   StyleSheet
 } from 'react-native'
 import { connect } from 'react-redux'
-// Add Actions - replace 'Your' with whatever your reducer is called :)
-// import YourActions from '../Redux/YourRedux'
-import { Metrics } from '../Themes'
+
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
@@ -50,15 +48,17 @@ let Rows = () => {
     let bg = i % 2 == 0 ? '#0c0d0f' : '#111215';
 
     return (
-      <View key={i} style={{flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: bg}}>
-        <Image style={{width: 200, height: 100}} source={{uri: el.image}}/>
-        <View style={{paddingLeft: 20}}>
-          <Text style={stylesInline.title}>{el.title}</Text>
-          <Text style={stylesInline.text}>{el.text1}<Text style={stylesInline.rate}>{el.rate}</Text></Text>
-          <Text style={stylesInline.text}>{el.text2}</Text>
-          <Text style={stylesInline.text}>{el.text3}</Text>
+      <TouchableOpacity key={i} style={{flex: 1}} activeOpacity={0.8}>
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: bg}}>
+          <Image style={{width: 200, height: 100}} source={{uri: el.image}}/>
+          <View style={{paddingLeft: 20}}>
+            <Text style={stylesInline.title}>{el.title}</Text>
+            <Text style={stylesInline.text}>{el.text1}<Text style={stylesInline.rate}>{el.rate}</Text></Text>
+            <Text style={stylesInline.text}>{el.text2}</Text>
+            <Text style={stylesInline.text}>{el.text3}</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   });
 

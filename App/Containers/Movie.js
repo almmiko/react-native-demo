@@ -7,6 +7,7 @@ import {
     Image,
     StyleSheet,
     ScrollView,
+    TouchableOpacity
 } from 'react-native';
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
@@ -17,11 +18,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-
-
-// I18n
-import I18n from 'react-native-i18n'
-
 
 import ParallaxView from 'react-native-parallax-view';
 
@@ -229,10 +225,16 @@ class Movie extends React.Component {
               <Text style={{color: '#fff', fontFamily: 'LatoBold'}}>{'also liked:'.toUpperCase()}</Text>
             </View>
 
-            <View style={{flex: 1, flexDirection: 'row' }}>
-              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_1'}} />
-              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_2'}} />
-              <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_3'}} />
+            <View style={{flex: 1, flexDirection: 'row'}}>
+              <TouchableOpacity style={{flex: 1}} activeOpacity={0.9}>
+                <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_1'}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{flex: 1}} activeOpacity={0.9}>
+                <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_2'}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{flex: 1}} activeOpacity={0.9}>
+                <Image  style={{height: 200, flex: 2}} source={{uri: 'movie_3'}} />
+              </TouchableOpacity>
             </View>
 
           </ScrollView>
