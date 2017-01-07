@@ -43,12 +43,17 @@ let data = [
 
 let Rows = () => {
 
+
+  function handlePressComponents() {
+    NavigationActions.tvShow()
+  }
+
   let rows = data.map((el, i) => {
 
     let bg = i % 2 == 0 ? '#0c0d0f' : '#111215';
 
     return (
-      <TouchableOpacity key={i} style={{flex: 1}} activeOpacity={0.8}>
+      <TouchableOpacity onPress={handlePressComponents} key={i} style={{flex: 1}} activeOpacity={0.8}>
         <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: bg}}>
           <Image style={{width: 200, height: 100}} source={{uri: el.image}}/>
           <View style={{paddingLeft: 20}}>
