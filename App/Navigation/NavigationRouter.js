@@ -28,6 +28,8 @@ import Movie from '../Containers/Movie'
 import TvShows from '../Containers/TvShows'
 import TvShow from '../Containers/TvShow'
 
+import Watchlist from '../Containers/Watchlist'
+
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
@@ -58,7 +60,7 @@ class NavigationRouter extends Component {
         path = 'tvShows';
         break;
       case 'Watchlist':
-        path = 'watchlist';
+        path = 'watchList';
         break;
       default:
         path = 'movies';
@@ -96,7 +98,7 @@ class NavigationRouter extends Component {
                  navigationBarStyle={styles.child}
                  key='movie'
                  component={Movie}
-                 title='Movie' />
+                 title='MAD MAX FURY ROAD' />
 
           {/* TV shows*/}
           <Scene colorForHeader="#1aceef"
@@ -113,6 +115,13 @@ class NavigationRouter extends Component {
                  titleStyle={[styles.movieTitle, {color: '#1aceef'}]}
                  navigationBarStyle={styles.child} />
 
+          {/* WatchList*/}
+          <Scene colorForHeader="#18f0c0"
+                 getRoute={this.redirectToView}
+                 key='watchList' component={Watchlist}
+                 title={'watchList'.toUpperCase()}
+                 titleStyle={[styles.movieTitle, {color: '#18f0c0'}]}
+                 navigationBarStyle={styles.bar} />
         </Scene>
 
       </Router>

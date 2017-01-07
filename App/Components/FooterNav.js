@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 let icons = [
         {icon: 'film', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Movies', key: 'movies'},
         {icon: 'television', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'TV shows', key: 'tvShows'},
-        {icon: 'heart-o', iconColor: '#fff', iconSize: 15, textColor: '#fff',text: 'Watchlist'},
+        {icon: 'heart-o', iconColor: '#fff', iconSize: 15, textColor: '#fff',text: 'Watchlist', key: 'watchList'},
         {icon: 'user-o', iconColor: '#fff', iconSize: 15, textColor: '#fff', text: 'Profile'},
     ];
 
@@ -63,6 +63,9 @@ let Icons = (props) => {
                     break;
                   case 'movies':
                     activeTabColor = '#ef1a51';
+                    break;
+                  case 'watchList':
+                    activeTabColor = '#18F0C0';
                     break;
                   default:
                     activeTabColor = '#fff';
